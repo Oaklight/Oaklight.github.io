@@ -28,4 +28,10 @@ github:
 
 # Gems
 gems:
-  - jekyll-paginate
+   ['jekyll-paginate', 'jekyll-multiple-languages']
+
+# The all languages used
+languages:          ['en', 'cn']
+
+# If not config, the first item of languages will be used as the default.
+language_default:   'en'
