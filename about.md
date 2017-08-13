@@ -2,6 +2,9 @@
 layout: post
 title: "About"
 author: "Peng"
+year: "2017"
+month: "08"
+day: "13"
 permalink: /about/
 ---
 
