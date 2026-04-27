@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Theme switching ---
   const themeButtons = document.querySelectorAll('[data-theme-btn]');
-  const savedTheme = localStorage.getItem('theme') || 'catppuccin';
+  const savedTheme = localStorage.getItem('theme') || 'latte';
   setTheme(savedTheme);
 
   themeButtons.forEach((btn) => {
