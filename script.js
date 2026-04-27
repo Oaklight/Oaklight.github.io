@@ -29,6 +29,7 @@ const I18N = {
     proj_nps: 'Python CLI & library for managing NPS edge servers',
     proj_zerodep: 'Zero-dependency, single-file Python implementations',
     proj_asr2clip: 'CLI tool to convert speech to clipboard text',
+    cv_download: 'download (PDF)',
     pub_rosetta: 'LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation',
     pub_toolregistry: 'ToolRegistry: A Protocol-Agnostic Tool Management Library for Function-Calling LLMs',
     pub_bior5: 'BioR5: A Three-Layer Architecture for Biological Reasoning in Scientific AI',
@@ -66,6 +67,7 @@ const I18N = {
     proj_nps: 'NPS 边缘服务器管理 Python CLI 和库',
     proj_zerodep: '零依赖、单文件 Python 实现集',
     proj_asr2clip: '语音转剪贴板文本 CLI 工具',
+    cv_download: '下载简历 (PDF)',
     pub_rosetta: 'LLM-Rosetta：面向跨提供商 LLM API 翻译的中心辐射型中间表示',
     pub_toolregistry: 'ToolRegistry：面向函数调用 LLM 的协议无关工具管理库',
     pub_bior5: 'BioR5：面向科学 AI 生物推理的三层架构',
@@ -115,6 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
         el.textContent = strings[key];
       }
     });
+
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+      cvLink.href = lang === 'zh'
+        ? 'https://people.cs.uchicago.edu/~dingpeng/resume_zh.pdf'
+        : 'https://people.cs.uchicago.edu/~dingpeng/resume_en.pdf';
+    }
   }
 
   // --- Email obfuscation ---
