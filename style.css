@@ -371,6 +371,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: 14px;
 }
 
 .contact-links a {
