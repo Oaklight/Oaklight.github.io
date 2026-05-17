@@ -126,6 +126,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // --- Live GitHub star counts ---
+  fetchGitHubStars();
+
+  async function fetchGitHubStars() {
+    try {
+      const resp = await fetch(
+        'https://api.github.com/users/Oaklight/repos?per_page=100',
+      );
+      if (!resp.ok) return;
+      const repos = await resp.json();
+
+      const starMap = {};
+      repos.forEach((repo) => {
+        starMap[repo.name.toLowerCase()] = repo.stargazers_count;
+      });
+
+      document.querySelectorAll('.project-item').forEach((item) => {
+        const link = item.querySelector('a[href*="github.com/Oaklight/"]');
+        if (!link) return;
+        const repoName = link.href.split('/').pop().toLowerCase();
+        const count = starMap[repoName];
+        if (count === undefined) return;
+
+        let starSpan = item.querySelector('.stars');
+        if (count > 0) {
+          if (!starSpan) {
+            starSpan = document.createElement('span');
+            starSpan.className = 'stars';
+            link.after(starSpan);
+          }
+          starSpan.textContent = '\u2605 ' + count;
+        } else if (starSpan) {
+          starSpan.remove();
+        }
+      });
+    } catch (_) {
+      // Silently fall back to hardcoded values
+    }
+  }
+
   // --- Email obfuscation ---
   const emailLink = document.getElementById('email-link');
   const emailText = document.getElementById('email-text');
