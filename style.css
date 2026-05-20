@@ -142,7 +142,7 @@ body {
   color: var(--text-dim);
   font-family: inherit;
   font-size: 0.7rem;
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: 4px;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
@@ -316,6 +316,32 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.project-item .metric {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border: 1px solid var(--tag-border);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: var(--text-dim);
+  background: color-mix(in srgb, var(--tag-bg) 88%, transparent);
+}
+
+.project-item .metric[data-metric-type="pypi"] {
+  color: var(--command);
+}
+
+.project-item .metric[data-metric-type="docker"] {
+  color: var(--link);
+}
+
+.project-item .metric.metric-muted {
+  color: var(--text-dim);
+  opacity: 0.85;
+}
+
 .project-item .desc {
   color: var(--text-dim);
   font-size: 0.8rem;
@@ -326,6 +352,42 @@ a:focus-visible {
 }
 
 .project-item .sep {
+  color: var(--border);
+}
+
+.project-sublist {
+  margin: -2px 0 6px 18px;
+  padding-left: 16px;
+  border-left: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.project-subitem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 3px 0;
+  font-size: 0.78rem;
+  min-width: 0;
+}
+
+.project-subitem a {
+  color: var(--link);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-subitem a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.project-subitem .desc {
+  color: var(--text-dim);
+  min-width: 0;
+}
+
+.project-subitem .sep {
   color: var(--border);
 }
 
@@ -385,6 +447,7 @@ a:focus-visible {
   color: var(--link);
   text-decoration: none;
   font-size: 0.9rem;
+  text-underline-offset: 0.18em;
 }
 
 .contact-links a:hover {
@@ -460,7 +523,7 @@ a:focus-visible {
   }
 
   .controls button {
-    padding: 3px 7px;
+    padding: 3px 8px;
   }
 
   .project-item {
@@ -470,6 +533,24 @@ a:focus-visible {
 
   .project-item .sep {
     display: none;
+  }
+
+  .project-sublist {
+    margin-left: 10px;
+    padding-left: 12px;
+  }
+
+  .project-subitem {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  .project-subitem .sep {
+    display: none;
+  }
+
+  .project-subitem .desc {
+    flex-basis: 100%;
   }
 
   .project-item .desc {

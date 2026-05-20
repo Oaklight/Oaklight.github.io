@@ -8,10 +8,10 @@ const I18N = {
     tag_tool: 'Tool Orchestration',
     tag_multiagent: 'Multi-Agent Collaboration',
     tag_llm: 'LLM Systems',
-    cat_ai: 'AI / Agent Ecosystem',
-    cat_infra: 'Infrastructure / DevOps',
-    cat_utils: 'Utilities',
+    cat_selected: 'Selected Projects',
+    cat_notable: 'Notable Tools',
     proj_toolregistry: 'Protocol-agnostic tool management for function-calling LLMs',
+    proj_toolregistry_featured: 'Protocol-agnostic tool management for function-calling LLMs, with a growing server + hub ecosystem',
     proj_hub: 'Ready-to-use tool collection for LLM agents',
     proj_server: 'Serve custom tools via OpenAPI and MCP',
     proj_rosetta: 'Production-ready LLM API translation layer for Python',
@@ -28,6 +28,7 @@ const I18N = {
     proj_openwrt: 'Automatic DFS channel management for OpenWrt',
     proj_nps: 'Python CLI & library for managing NPS edge servers',
     proj_zerodep: 'Zero-dependency, single-file Python implementations',
+    proj_zerodep_featured: 'Empirical study of zero-dependency Python libraries built under stdlib-only constraints',
     proj_asr2clip: 'CLI tool to convert speech to clipboard text',
     cv_download: 'download (PDF)',
     pub_rosetta: 'LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation',
@@ -46,10 +47,10 @@ const I18N = {
     tag_tool: '工具编排',
     tag_multiagent: '多智能体协作',
     tag_llm: 'LLM 系统',
-    cat_ai: 'AI / 智能体生态',
-    cat_infra: '基础设施 / DevOps',
-    cat_utils: '实用工具',
+    cat_selected: '精选项目',
+    cat_notable: '值得一提的工具',
     proj_toolregistry: '协议无关的函数调用 LLM 工具管理库',
+    proj_toolregistry_featured: '面向函数调用 LLM 的协议无关工具管理框架，配套 server 与 hub 生态持续扩展',
     proj_hub: 'LLM 智能体即用型工具集合',
     proj_server: '通过 OpenAPI 和 MCP 提供自定义工具服务',
     proj_rosetta: '生产级 Python LLM API 翻译层',
@@ -66,6 +67,7 @@ const I18N = {
     proj_openwrt: 'OpenWrt 自动 DFS 信道管理',
     proj_nps: 'NPS 边缘服务器管理 Python CLI 和库',
     proj_zerodep: '零依赖、单文件 Python 实现集',
+    proj_zerodep_featured: '面向零依赖 Python 库的实证研究，在仅使用标准库约束下构建与评测',
     proj_asr2clip: '语音转剪贴板文本 CLI 工具',
     cv_download: '下载简历 (PDF)',
     pub_rosetta: 'LLM-Rosetta：面向跨提供商 LLM API 翻译的中心辐射型中间表示',
@@ -80,6 +82,8 @@ const I18N = {
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const systemThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+
+  loadCachedMetrics();
 
   // --- Theme switching ---
   const themeButtons = document.querySelectorAll('[data-theme-btn]');
@@ -177,6 +181,51 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (_) {
       // Silently fall back to hardcoded values
     }
+  }
+
+  async function loadCachedMetrics() {
+    try {
+      const resp = await fetch('data/metrics.json', { cache: 'no-cache' });
+      if (!resp.ok) return;
+      const data = await resp.json();
+      const projects = data.projects || {};
+
+      document.querySelectorAll('[data-metric-project]').forEach((el) => {
+        const project = el.dataset.metricProject;
+        const type = el.dataset.metricType;
+        const metrics = projects[project];
+        if (!metrics) return;
+
+        if (type === 'pypi') {
+          if (metrics.pypi_monthly) {
+            const value = typeof metrics.pypi_monthly === 'number'
+              ? `${formatCompactNumber(metrics.pypi_monthly)}/month`
+              : metrics.pypi_monthly;
+            el.textContent = `PyPI ${value}`;
+          } else {
+            el.textContent = 'PyPI';
+            el.classList.add('metric-muted');
+          }
+        }
+
+        if (type === 'docker') {
+          if (typeof metrics.docker_pulls === 'number') {
+            el.textContent = `Docker ${formatCompactNumber(metrics.docker_pulls)}`;
+          } else {
+            el.textContent = 'Docker';
+            el.classList.add('metric-muted');
+          }
+        }
+      });
+    } catch (_) {
+      // Keep default labels if cache is unavailable.
+    }
+  }
+
+  function formatCompactNumber(value) {
+    if (value >= 1000000) return `${(value / 1000000).toFixed(1).replace(/\.0$/, '')}M`;
+    if (value >= 1000) return `${Math.round(value / 1000)}k`;
+    return String(value);
   }
 
   // --- Email obfuscation ---
