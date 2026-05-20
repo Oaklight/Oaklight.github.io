@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>Peng Ding — pding@oaklight:~</title>
   <meta name="description" content="Peng Ding — PhD Candidate in Computer Science at University of Chicago. AI Agents, Tool Orchestration, Multi-Agent Collaboration.">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      root.setAttribute('data-theme', savedTheme || (systemPrefersLight ? 'light' : 'dark'));
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +33,7 @@
       <button data-theme-btn="paper" title="Paper Yellow">Paper</button>
       <span class="sep">|</span>
       <button data-lang-btn="en" class="active">EN</button>
-      <button data-lang-btn="zh">ZH</button>
+      <button data-lang-btn="zh">中</button>
     </div>
   </div>
 
