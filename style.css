@@ -8,84 +8,64 @@
   box-sizing: border-box;
 }
 
-/* ===== Theme: Catppuccin Mocha (default) ===== */
-[data-theme="catppuccin"] {
-  --bg: #1e1e2e;
-  --bg-terminal: #1e1e2e;
-  --bg-titlebar: #181825;
-  --border: #45475a;
-  --text: #cdd6f4;
-  --text-bright: #f5e0dc;
-  --text-dim: #a6adc8;
-  --prompt: #cba6f7;
-  --command: #89b4fa;
-  --accent: #a6e3a1;
-  --link: #89dceb;
-  --link-hover: #74c7ec;
-  --tag-bg: #313244;
-  --tag-border: #45475a;
-  --venue: #fab387;
-  --stars: #f9e2af;
+/* ===== Theme: Dark ===== */
+[data-theme="dark"] {
+  --bg: #16181d;
+  --bg-terminal: #1b1f27;
+  --bg-titlebar: #141821;
+  --border: #313845;
+  --text: #d6deeb;
+  --text-bright: #f5f7fb;
+  --text-dim: #8b95a7;
+  --prompt: #c792ea;
+  --command: #82aaff;
+  --accent: #a3d977;
+  --link: #7fdbca;
+  --link-hover: #56cfe1;
+  --tag-bg: #232936;
+  --tag-border: #384152;
+  --venue: #f6ad55;
+  --stars: #f6e05e;
 }
 
-/* ===== Theme: Gruvbox Dark ===== */
-[data-theme="gruvbox"] {
-  --bg: #282828;
-  --bg-terminal: #282828;
-  --bg-titlebar: #1d2021;
-  --border: #504945;
-  --text: #ebdbb2;
-  --text-bright: #fbf1c7;
-  --text-dim: #a89984;
-  --prompt: #fe8019;
-  --command: #83a598;
-  --accent: #b8bb26;
-  --link: #83a598;
-  --link-hover: #8ec07c;
-  --tag-bg: #3c3836;
-  --tag-border: #504945;
-  --venue: #fabd2f;
-  --stars: #fabd2f;
+/* ===== Theme: Light ===== */
+[data-theme="light"] {
+  --bg: #edf1f5;
+  --bg-terminal: #ffffff;
+  --bg-titlebar: #e4eaf1;
+  --border: #c8d1dc;
+  --text: #243447;
+  --text-bright: #111827;
+  --text-dim: #5b6b7f;
+  --prompt: #7c3aed;
+  --command: #2563eb;
+  --accent: #059669;
+  --link: #0f766e;
+  --link-hover: #0ea5e9;
+  --tag-bg: #eef2f7;
+  --tag-border: #d7dee8;
+  --venue: #c2410c;
+  --stars: #ca8a04;
 }
 
-/* ===== Theme: Dracula ===== */
-[data-theme="dracula"] {
-  --bg: #282a36;
-  --bg-terminal: #282a36;
-  --bg-titlebar: #21222c;
-  --border: #44475a;
-  --text: #f8f8f2;
-  --text-bright: #f8f8f2;
-  --text-dim: #6272a4;
-  --prompt: #bd93f9;
-  --command: #8be9fd;
-  --accent: #50fa7b;
-  --link: #8be9fd;
-  --link-hover: #ff79c6;
-  --tag-bg: #44475a;
-  --tag-border: #6272a4;
-  --venue: #ffb86c;
-  --stars: #f1fa8c;
-}
-
-/* ===== Theme: Catppuccin Latte (light) ===== */
-[data-theme="latte"] {
-  --bg: #e6e9ef;
-  --bg-terminal: #eff1f5;
-  --bg-titlebar: #dce0e8;
-  --border: #bcc0cc;
-  --text: #4c4f69;
-  --text-bright: #1e1e2e;
-  --text-dim: #6c6f85;
-  --prompt: #8839ef;
-  --command: #1e66f5;
-  --accent: #40a02b;
-  --link: #04a5e5;
-  --link-hover: #209fb5;
-  --tag-bg: #dce0e8;
-  --tag-border: #bcc0cc;
-  --venue: #fe640b;
-  --stars: #df8e1d;
+/* ===== Theme: Paper Yellow ===== */
+[data-theme="paper"] {
+  --bg: #f3ecd2;
+  --bg-terminal: #fbf5df;
+  --bg-titlebar: #e9dfbf;
+  --border: #cdbf97;
+  --text: #4d4334;
+  --text-bright: #2f281e;
+  --text-dim: #7a6c57;
+  --prompt: #8b5cf6;
+  --command: #2563eb;
+  --accent: #3f7d58;
+  --link: #0f766e;
+  --link-hover: #b45309;
+  --tag-bg: #efe5c7;
+  --tag-border: #d7c8a1;
+  --venue: #b45309;
+  --stars: #a16207;
 }
 
 html {

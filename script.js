@@ -79,19 +79,32 @@ const I18N = {
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
+  const systemThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
 
   // --- Theme switching ---
   const themeButtons = document.querySelectorAll('[data-theme-btn]');
-  const savedTheme = localStorage.getItem('theme') || 'latte';
-  setTheme(savedTheme);
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme, { persist: false });
+  } else {
+    applySystemTheme();
+    systemThemeQuery.addEventListener('change', () => {
+      if (!localStorage.getItem('theme')) applySystemTheme();
+    });
+  }
 
   themeButtons.forEach((btn) => {
     btn.addEventListener('click', () => setTheme(btn.dataset.themeBtn));
   });
 
-  function setTheme(theme) {
+  function applySystemTheme() {
+    setTheme(systemThemeQuery.matches ? 'light' : 'dark', { persist: false });
+  }
+
+  function setTheme(theme, options = {}) {
+    const { persist = true } = options;
     root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    if (persist) localStorage.setItem('theme', theme);
     themeButtons.forEach((b) => b.classList.toggle('active', b.dataset.themeBtn === theme));
   }
 
