@@ -234,6 +234,10 @@ a:focus-visible {
   max-width: 78ch;
 }
 
+.research-focus {
+  color: var(--text);
+}
+
 .bio-detail a {
   color: var(--link);
   text-decoration: none;
