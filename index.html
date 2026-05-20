@@ -6,6 +6,31 @@
   <meta name="color-scheme" content="light dark">
   <title>Peng Ding — pding@oaklight:~</title>
   <meta name="description" content="Peng Ding — PhD Candidate in Computer Science at University of Chicago. AI Agents, Tool Orchestration, Multi-Agent Collaboration.">
+  <style>
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #16181d;
+      --text: #d6deeb;
+    }
+
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #edf1f5;
+      --text: #243447;
+    }
+
+    html[data-theme="paper"] {
+      color-scheme: light;
+      --bg: #f3ecd2;
+      --text: #4d4334;
+    }
+
+    html,
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+  </style>
   <script>
     (() => {
       const root = document.documentElement;
