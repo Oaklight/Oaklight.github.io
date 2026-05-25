@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T01:26:42.646899+00:00",
+  "updated_at": "2026-05-25T16:27:16.008662+00:00",
   "projects": {
     "ToolRegistry": {
       "pypi_monthly": "4.5k/month",
@@ -22,7 +22,7 @@
       "pypi_package": "weilink"
     },
     "asr2clip": {
-      "pypi_monthly": 1363,
+      "pypi_monthly": 1351,
       "pypi_package": "asr2clip"
     },
     "nps-ctl": {
@@ -30,7 +30,7 @@
       "pypi_package": "nps-ctl"
     },
     "composerize-minimal": {
-      "docker_pulls": 98854,
+      "docker_pulls": 99819,
       "docker_image": "oaklight/composerize"
     }
   }
