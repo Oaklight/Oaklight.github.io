@@ -32,6 +32,10 @@
     "composerize-minimal": {
       "docker_pulls": 99819,
       "docker_image": "oaklight/composerize"
+    },
+    "tinyleaf": {
+      "pypi_monthly": null,
+      "pypi_package": "tinyleaf"
     }
   }
 }

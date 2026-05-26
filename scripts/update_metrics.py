@@ -11,6 +11,7 @@ PACKAGES = {
     "llm-rosetta": {"pypi": "llm-rosetta"},
     "argo-proxy": {"pypi": "argo-proxy"},
     "zerodep": {"pypi": "zerodep"},
+    "tinyleaf": {"pypi": "tinyleaf"},
     "WeiLink": {"pypi": "weilink"},
     "asr2clip": {"pypi": "asr2clip"},
     "nps-ctl": {"pypi": "nps-ctl"},
