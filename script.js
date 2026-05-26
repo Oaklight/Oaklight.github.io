@@ -146,8 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cvLink = document.getElementById('cv-link');
     if (cvLink) {
       cvLink.href = lang === 'zh'
-        ? 'https://raw.githubusercontent.com/Oaklight/resume/master/resume_zh.pdf'
-        : 'https://raw.githubusercontent.com/Oaklight/resume/master/resume_en.pdf';
+        ? 'resume_zh.pdf'
+        : 'resume_en.pdf';
     }
   }
 
