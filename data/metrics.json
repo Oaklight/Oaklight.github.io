@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-06-01T19:22:43.966307+00:00",
+  "updated_at": "2026-06-08T17:26:06.429675+00:00",
   "projects": {
     "ToolRegistry": {
       "pypi_monthly": "4.5k/month",
       "pypi_package": "toolregistry"
     },
     "llm-rosetta": {
-      "pypi_monthly": 4051,
+      "pypi_monthly": 5187,
       "pypi_package": "llm-rosetta"
     },
     "argo-proxy": {
-      "pypi_monthly": 1284,
+      "pypi_monthly": 1398,
       "pypi_package": "argo-proxy"
     },
     "zerodep": {
@@ -18,7 +18,7 @@
       "pypi_package": "zerodep"
     },
     "tinyleaf": {
-      "pypi_monthly": 422,
+      "pypi_monthly": 610,
       "pypi_package": "tinyleaf"
     },
     "WeiLink": {
@@ -30,11 +30,11 @@
       "pypi_package": "asr2clip"
     },
     "nps-ctl": {
-      "pypi_monthly": 176,
+      "pypi_monthly": 436,
       "pypi_package": "nps-ctl"
     },
     "composerize-minimal": {
-      "docker_pulls": 101155,
+      "docker_pulls": 102466,
       "docker_image": "oaklight/composerize"
     }
   }
