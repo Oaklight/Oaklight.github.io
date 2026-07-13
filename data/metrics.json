@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-06T16:55:16.158273+00:00",
+  "updated_at": "2026-07-13T16:38:31.774693+00:00",
   "projects": {
     "ToolRegistry": {
-      "pypi_monthly": 8824,
+      "pypi_monthly": 14785,
       "pypi_package": "toolregistry"
     },
     "llm-rosetta": {
@@ -18,7 +18,7 @@
       "pypi_package": "zerodep"
     },
     "tinyleaf": {
-      "pypi_monthly": 261,
+      "pypi_monthly": 838,
       "pypi_package": "tinyleaf"
     },
     "WeiLink": {
@@ -30,11 +30,11 @@
       "pypi_package": "asr2clip"
     },
     "nps-ctl": {
-      "pypi_monthly": 517,
+      "pypi_monthly": 690,
       "pypi_package": "nps-ctl"
     },
     "composerize-minimal": {
-      "docker_pulls": 108427,
+      "docker_pulls": 110662,
       "docker_image": "oaklight/composerize"
     }
   }
