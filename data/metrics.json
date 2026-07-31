@@ -9,6 +9,10 @@
       "pypi_monthly": 5377,
       "pypi_package": "llm-rosetta"
     },
+    "llm-comply": {
+      "pypi_monthly": 0,
+      "pypi_package": "llm-comply"
+    },
     "argo-proxy": {
       "pypi_monthly": 1541,
       "pypi_package": "argo-proxy"
