@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T16:25:47.838254+00:00",
+  "updated_at": "2026-08-03T16:30:39.356140+00:00",
   "projects": {
     "ToolRegistry": {
       "pypi_monthly": 14785,
@@ -8,10 +8,6 @@
     "llm-rosetta": {
       "pypi_monthly": 5377,
       "pypi_package": "llm-rosetta"
-    },
-    "llm-comply": {
-      "pypi_monthly": 0,
-      "pypi_package": "llm-comply"
     },
     "argo-proxy": {
       "pypi_monthly": 1541,
@@ -34,11 +30,11 @@
       "pypi_package": "asr2clip"
     },
     "nps-ctl": {
-      "pypi_monthly": 57,
+      "pypi_monthly": 64,
       "pypi_package": "nps-ctl"
     },
     "composerize-minimal": {
-      "docker_pulls": 116241,
+      "docker_pulls": 119062,
       "docker_image": "oaklight/composerize"
     }
   }
