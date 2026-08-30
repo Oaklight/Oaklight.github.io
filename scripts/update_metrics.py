@@ -9,12 +9,14 @@ from datetime import datetime, timezone
 PACKAGES = {
     "ToolRegistry": {"pypi": "toolregistry"},
     "llm-rosetta": {"pypi": "llm-rosetta"},
+    "llm-comply": {"pypi": "llm-comply"},
     "argo-proxy": {"pypi": "argo-proxy"},
     "zerodep": {"pypi": "zerodep"},
     "tinyleaf": {"pypi": "tinyleaf"},
     "WeiLink": {"pypi": "weilink"},
     "asr2clip": {"pypi": "asr2clip"},
     "nps-ctl": {"pypi": "nps-ctl"},
+    "veilrender": {"pypi": "veilrender", "docker": "oaklight/veilrender"},
     "composerize-minimal": {"docker": "oaklight/composerize"},
 }
 
