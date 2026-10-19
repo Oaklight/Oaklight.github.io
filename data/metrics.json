@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T22:01:59.426128+00:00",
+  "updated_at": "2026-10-19T19:45:08.384614+00:00",
   "projects": {
     "ToolRegistry": {
       "pypi_monthly": 2061,
@@ -40,11 +40,11 @@
     "veilrender": {
       "pypi_monthly": 491,
       "pypi_package": "veilrender",
-      "docker_pulls": 6797,
+      "docker_pulls": 7081,
       "docker_image": "oaklight/veilrender"
     },
     "composerize-minimal": {
-      "docker_pulls": 144608,
+      "docker_pulls": 146563,
       "docker_image": "oaklight/composerize"
     }
   }
